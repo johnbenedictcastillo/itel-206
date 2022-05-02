@@ -18,10 +18,25 @@ $pink:#FC0E52;
 .bg-grey-2{
     background: $grey-2;
 }
+.bg-orange{
+    background: $orange;
+}
 
 body,html {
     overflow-x: hidden;
     margin: 0;
+}
+#navbar{
+    transition: 500ms;
+    &.colored-orange{
+        background: $orange;
+    }
+    
+    &.colored:not(.colored-orange){
+        background: white;
+        box-shadow: 0 0.2px 5px rgb(180, 180, 180);
+    }
+    background: transparent;
 }
 
 main {
@@ -96,6 +111,7 @@ footer{
 
 @media screen and (max-width:600px) {
     main{
+        padding-top: 70px;
         h1{
             font-size: 2.5rem;
         }
@@ -103,14 +119,10 @@ footer{
             .shape-bg {
                 top:unset;
                 bottom: -30px;
-                width: 600px;
-                height: 600px;
+                right: -310px;
+                width: 460px;
+                height: 460px;
             }
-        }
-    }
-    footer{
-        h1{
-            font-size: 2.5rem;
         }
     }
 }
